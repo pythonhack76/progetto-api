@@ -21,13 +21,20 @@ class Database{
         if($this->conn->connect_errno){
                 print_r($this->conn->connect_error);
                 exit;
-        }else{
+        }else{ 
+            echo "connesisone OK";
             return $this->conn; 
+           
+            //print_r($this->conn);
         }
         
     }
 
 }
+
+$db = new Database();
+
+$db->connect();
 
 
 ?>
